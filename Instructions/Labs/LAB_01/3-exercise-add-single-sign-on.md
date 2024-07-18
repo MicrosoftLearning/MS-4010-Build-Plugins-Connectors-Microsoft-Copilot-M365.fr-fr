@@ -20,7 +20,7 @@ Dans Visual Studio :
     ```json
     "identifierUris": [
         "api://${{BOT_DOMAIN}}/botid-${{BOT_ID}}"
-    ]
+    ],
     ```
 
 1. Dans le fichier, mettez à jour le tableau **oauth2Permissions** pour créer une étendue qui permettra à Teams d’appeler des API web en tant qu’administrateur ou utilisateur :
@@ -86,7 +86,7 @@ Dans Visual Studio :
             "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
           ]
         }
-      ]
+      ],
     ```
 
 1. Enregistrez vos modifications
@@ -96,13 +96,13 @@ Ensuite, mettez à jour le fichier manifeste de l’application pour définir la
 Continuez dans Visual Studio.
 
 1. Dans le dossier **appPackage**, ouvrez le fichier nommé **manifest.json**.
-1. Dans le fichier , ajoutez le code suivant :
+1. Dans le fichier, ajoutez le code suivant après la **description** :
 
     ```json
     "webApplicationInfo": {
       "id": "${{BOT_ID}}",
       "resource": "api://${{BOT_DOMAIN}}/botid-${{BOT_ID}}"
-    }
+    },
     ```
 
 1. Enregistrez vos modifications
@@ -500,7 +500,7 @@ Tout étant maintenant en place, exécutez le processus Préparer les dépendanc
 
 Continuez dans Visual Studio.
 
-1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **MsgExtProductSupport**.
+1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit de la souris sur le projet **TeamsApp**.
 1. Développez le menu **Teams Toolkit** et sélectionnez **Préparer les dépendances de l’application Teams**.
 1. Dans la boîte de dialogue **Compte Microsoft 365**, sélectionnez **Continuer**.
 1. Dans la boîte de dialogue **Approvisionner**, sélectionnez **Approvisionner**.
@@ -522,16 +522,11 @@ Continuez dans Visual Studio.
 1. Dans la zone de rédaction du message, sélectionnez **...** pour ouvrir le menu volant de l’application.
 1. Dans la liste des applications, sélectionnez **Produits Contoso** pour ouvrir l’extension de message.
 1. Dans la zone de texte, entrez **Bot Builder** pour démarrer une recherche.
-1. Dans la liste des résultats, **sélectionnez un résultat** pour incorporer une carte dans la zone de rédaction du message.
 1. Le message **You'll need to sign in to use this app** s’affiche.
 1. Sélectionnez le **lien de connexion** pour ouvrir un nouvel onglet et démarrer le flux d’authentification.
-1. Dans la page de consentement des autorisations, passez en revue les autorisations demandées.
-1. Sélectionnez *Accepter* pour fermer l’onglet et revenir à Microsoft Teams.
-1. Dans la zone de rédaction du message, sélectionnez **...** pour ouvrir le menu volant de l’application.
-1. Dans la liste des applications, sélectionnez **Produits Contoso** pour ouvrir l’extension de message.
-1. Dans la zone de texte, entrez **Bot Builder** pour démarrer une recherche.
-1. Vous êtes invité à vous connecter à nouveau. Suivez à nouveau le **lien de connexion** pour démarrer la recherche.
-1. Dans la liste des résultats, **sélectionnez un résultat** pour incorporer une carte dans la zone de rédaction du message.
+1. Dans la page de consentement des autorisations, examinez les autorisations demandées.
+1. Sélectionnez **Accepter** pour fermer l’onglet et revenir à Microsoft Teams.
+1. Dans la liste des résultats, **sélectionnez un résultat** pour incorporer une carte dans la zone de rédaction du message et l’envoyer.
 
 Fermez le navigateur pour arrêter pour la session de débogage.
 

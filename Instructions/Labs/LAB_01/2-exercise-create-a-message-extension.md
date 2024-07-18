@@ -8,7 +8,7 @@ lab:
 
 Dans cet exercice, vous créerez une extension de message avec une commande de recherche. Vous créerez d’abord une structure d’un projet à l’aide d’un modèle de projet Teams Toolkit, puis vous le mettrez à jour pour la configurer en utilisant une ressource Azure AI Bot Service pour le développement local. Vous créerez un tunnel de développement pour activer la communication entre le service du bot et votre service web qui s’exécute localement. Vous préparerez ensuite votre application pour provisionner les ressources requises. Enfin, vous exécutez et déboguez votre extension de message et vous la testez dans Microsoft Teams.
 
-:::image type="content" source="../media/2-search-results-nuget.png" alt-text="Capture d’écran des résultats de la recherche retournés par une extension de message basée sur une recherche dans Microsoft Teams." lightbox="../media/2-search-results-nuget.png":::
+![Capture d’écran des résultats de la recherche retournés par une extension de message basée sur une recherche dans Microsoft Teams.](../media/2-search-results-nuget.png)
 
 ## Tâche 1 : créer un projet avec Teams Toolkit pour Visual Studio
 
@@ -19,8 +19,7 @@ Commencez par créer un projet.
 1. Dans l’écran Créer un projet, développez la liste déroulante **Toutes les plateformes**, puis sélectionnez **Microsoft Teams**. Sélectionnez **Suivant** pour continuer.
 1. Dans l’écran Configurer un nouveau projet. Spécifiez les valeurs suivantes :
     1. **Nom du projet** : MsgExtProductSupport.
-    1. **Emplacement** : sélectionnez l’emplacement de votre choix.
-    1. **Placer la solution et le projet dans le même répertoire** : fait.
+    1. **Emplacement** : choisissez l’emplacement par défaut.
 1. Structurez le projet en sélectionnant **Créer**.
 1. Dans la boîte de dialogue Créer une application Teams, développez la liste déroulante **Tous les types d’applications**, puis sélectionnez **Extension de message**.
 1. Dans la liste des modèles, sélectionnez **Résultats de recherche personnalisés**.
@@ -149,7 +148,7 @@ La dernière étape consiste à mettre à jour le fichier projet de Teams Toolk
 Continuez dans Visual Studio.
 
 1. Dans le dossier racine du projet, ouvrez **teamsapp.local.yml**.
-1. Dans le fichier, recherchez l’étape qui utilise l’action **botAadApp/create** et remplacez-la par :
+1. Dans le fichier, recherchez l’étape qui utilise l’action (lignes 17-26) **botAadApp/create** et remplacez-la par :
 
     ```yml
       - uses: aadApp/create
@@ -181,7 +180,7 @@ Continuez dans Visual Studio.
           bicepCliVersion: v0.9.1
     ```
 
-1. Dans le fichier, supprimez l’étape qui utilise l’action **botFramework/create**.
+1. Dans le fichier, supprimez l’étape qui utilise l’action (lignes 53-62) **botFramework/create**.
 1. Enregistrez vos modifications.
 
 L’inscription d’application est configurée en deux étapes, tout d’abord, l’action **aadApp/create** crée une inscription d’application multi-locataire avec une clé secrète client, en écrivant ses sorties dans le fichier **.env.local** en tant que variables d’environnement. Ensuite, l’action **aadApp/update** utilise le fichier **entra.bot.manifest.json** pour mettre à jour l’inscription de l’application.
@@ -192,18 +191,18 @@ La dernière étape utilise l’action **arm/deploy** pour approvisionner la res
 
 Lorsque l’utilisateur interagit avec votre extension de message, le service bot envoie des requêtes au service web. Pendant le développement, votre service web s’exécute localement sur votre ordinateur. Pour permettre au service bot d’atteindre votre service web, vous devez l’exposer au-delà de votre ordinateur à l’aide d’un tunnel de développement.
 
-:::image type="content" source="../media/18-select-dev-tunnel.png" alt-text="Capture d’écran du menu Tunnels dev développé dans Visual Studio." lightbox="../media/18-select-dev-tunnel.png":::
+![Capture d’écran du menu Tunnels dev développé dans Visual Studio.](../media/18-select-dev-tunnel.png)
 
 Continuez dans Visual Studio.
 
-1. Dans la barre d’outils, développez le menu du profil de débogage **en sélectionnant la liste déroulante en regard du bouton Microsoft Teams (navigateur)**.
+1. Dans la barre d’outils, vérifiez que **MsgExtProductSupport** est sélectionné comme projet de démarrage et développez le menu du profil de débogage en sélectionnant le menu déroulant à côté du **bouton Microsoft Teams (navigateur)** ou **Démarrer le projet**.
 1. Développez le menu **Tunnels dev (aucun tunnel actif)** et sélectionnez **Créer un tunnel…**.
 1. Dans la boîte de dialogue, spécifiez les valeurs suivantes :
-    1. **Compte** : sélectionnez le compte de votre choix.
+    1. **Compte** : connectez-vous avec votre compte d’utilisateur Microsoft 365.
     1. **Nom** : MsgExtProductSupport.
     1. **Type de tunnel** : temporaire.
     1. **Accès** : public.
-1. Créez le tunnel en sélectionnant **OK**. Une invite s’affiche indiquant que le nouveau tunnel est maintenant le tunnel actif.
+1. Créez le tunnel en sélectionnant **OK**
 1. Fermez l’invite en sélectionnant **OK**.
 
 ## Tâche 4 : mettre à jour le manifeste d’application
@@ -212,9 +211,9 @@ Le manifeste de l’application décrit les fonctionnalités et caractéristique
 
 Tout d’abord, téléchargez les icônes de l’application et ajoutez-les au projet.
 
-:::image type="content" source="../media/app/color-local.png" alt-text="Icône de couleur utilisée pour le développement local." lightbox="../media/app/color-local.png":::
+![Icône de couleur utilisée pour le développement local.](../media/app/color-local.png)
 
-:::image type="content" source="../media/app/color-dev.png" alt-text="Icône de couleur utilisée pour le développement à distance." lightbox="../media/app/color-dev.png":::
+![Icône de couleur utilisée pour le développement à distance.](../media/app/color-dev.png)
 
 1. Téléchargez **color-local.png** et **color-dev.png**.
 1. Dans le dossier **appPackage**, ajoutez **color-local.png** et **color-dev.png**.
@@ -236,10 +235,9 @@ Continuez dans Visual Studio.
 Enfin, mettez à jour les objets des icônes, du nom et de la description dans le fichier manifeste de l’application.
 
 1. Dans le dossier **appPackage**, ouvrez le fichier nommé **manifest.json**.
-1. Dans le fichier, mettez à jour les objets **icônes**, **nom et **description** avec :
+1. Dans le fichier, remplacez les **icônes**, le **nom** et la **description** des objets par les lignes suivantes (lignes 13-24) :
 
     ```json
-    {
         "icons": {
             "color": "color-${{TEAMSFX_ENV}}.png",
             "outline": "outline.png"
@@ -251,8 +249,7 @@ Enfin, mettez à jour les objets des icônes, du nom et de la description dans l
         "description": {
             "short": "Product look up tool.",
             "full": "Get real-time product information and share them in a conversation."
-        }
-    }
+        },
     ```
 
 1. Enregistrez vos modifications
@@ -261,18 +258,18 @@ Enfin, mettez à jour les objets des icônes, du nom et de la description dans l
 
 Tout étant maintenant en place, utilisez Teams Toolkit et exécutez le processus Préparer les dépendances de l’application Teams pour approvisionner les ressources requises.
 
-:::image type="content" source="../media/19-prepare-teams-app-dependencies.png" alt-text="Capture d’écran du menu Teams Toolkit développé dans Visual Studio." lightbox="../media/19-prepare-teams-app-dependencies.png":::
+![Capture d’écran du menu Teams Toolkit développé dans Visual Studio.](../media/19-prepare-teams-app-dependencies.png)
 
 Le processus Préparer les dépendances de l’application Teams met à jour les variables d’environnement **BOT_ENDPOINT** et **BOT_DOMAIN** dans le fichier .env.local à l’aide de l’URL du tunnel de développement actif et exécute les actions décrites dans le fichier **teamsapp.local.yml**.
 
 Continuez dans Visual Studio.
 
-1. Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet **MsgExtProductSupport**.
+1. Dans l’Explorateur de solutions, cliquez avec le bouton droit de la souris sur **TeamsApp**.
 1. Développez le menu **Teams Toolkit** et sélectionnez **Préparer les dépendances de l’application Teams**.
 1. Dans la boîte de dialogue **Compte Microsoft 365**, sélectionnez le compte de votre locataire développeur, puis sélectionnez **Continuer**
 1. Dans la boîte de dialogue **Approvisionner**, sélectionnez le compte à utiliser pour déployer des ressources sur Azure et spécifiez les valeurs suivantes :
-    1. **Nom de l’abonnement** : sélectionnez l’abonnement à utiliser dans la liste déroulante.
-    1. **Groupe de ressources** : sélectionnez Nouveau… pour ouvrir une boîte de dialogue, saisissez **rg-msgext-product-support-local, puis sélectionnez **OK**.
+    1. **Nom de l’abonnement** : utilisez la liste déroulante pour sélectionner un abonnement.
+    1. **Groupe de ressources** : développez la liste déroulante et sélectionnez le groupe de ressources qui a été précréé pour votre compte d’utilisateur.
     1. **Région** : sélectionnez la région la plus proche de vous dans la liste déroulante.
 1. Approvisionnez les ressources dans Azure en sélectionnant **Approvisionner**.
 1. Dans l’invite d’avertissement de Teams Toolkit, sélectionnez **Approvisionner**.
@@ -287,7 +284,8 @@ Démarrez maintenant le service web et testez l’extension de message. Utilisez
 Continuez dans Visual Studio.
 
 1. Appuyez sur la touche F5 pour démarrer une session de débogage et ouvrir une nouvelle fenêtre de navigateur qui accède au client web Microsoft Teams.
-1. À l’invite, saisissez vos informations d’identification de compte Microsoft 365.
+1. Choisissez **Oui** lorsqu’il vous est demandé de faire confiance aux différents certificats SSL, puis sélectionnez **Oui** à nouveau pour tous les avertissements de sécurité. Notez que vous devrez peut-être redémarrer le débogueur après avoir accepté les certificats.
+1. Lorsque le système vous le demande, saisissez vos informations d’identification de compte Microsoft 365.
 
   > [!IMPORTANT]
   > Si une boîte de dialogue s’affiche dans Microsoft Teams avec le message « Cette application est introuvable », suivez les étapes ci-dessous pour charger manuellement le package de l’application :
@@ -303,7 +301,7 @@ Continuez pour installer l’application :
 
 1. Dans la boîte de dialogue d’installation de l’application, sélectionnez **Ajouter**.
 1. Ouvrez une conversation Microsoft Teams, nouvelle ou existante.
-1. Dans la zone de rédaction du message, sélectionnez **...** pour ouvrir le menu volant de l’application.
+1. Dans la zone de rédaction du message, commencez à taper **/apps** pour ouvrir le menu volant.
 1. Dans la liste des applications, sélectionnez **Produits Contoso** pour ouvrir l’extension de message.
 1. Dans la zone de texte, entrez **Bot Builder** pour démarrer une recherche.
 1. Dans la liste des résultats, sélectionnez un résultat pour incorporer une carte dans la zone de rédaction du message.
