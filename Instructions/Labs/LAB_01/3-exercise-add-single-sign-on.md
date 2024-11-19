@@ -1,7 +1,7 @@
 ---
 lab:
   title: "Exercice\_2\_: ajouter l’authentification unique"
-  module: 'LAB 01: Connect Copilot for Microsoft 365 to your external data in real-time with message extension plugins built with .NET and Visual Studio'
+  module: 'LAB 01: Connect Microsoft 365 Copilot to your external data in real-time with message extension plugins built with .NET and Visual Studio'
 ---
 
 # Exercice 2 : ajouter l’authentification unique
@@ -244,7 +244,7 @@ Ensuite, mettez à jour le code du bot pour qu’il utilise le nom du paramètre
 
 1. Dans le dossier **Search**, ouvrez **SearchApp.cs**.
 
-1. Au début de la classe **SearchApp**, créez un constructeur qui accepte un objet **IConfiguration** et attribue la valeur de la propriété **CONNECTION_NAME** à un champ privé nommé **connectionName** :
+1. Au début de la classe **SearchApp** (environ à la ligne 14), créez un constructeur qui accepte un objet **IConfiguration** et assigne la valeur de la propriété **CONNECTION_NAME** à un champ privé nommé **connectionName**.
 
     ```csharp
     private readonly string connectionName;

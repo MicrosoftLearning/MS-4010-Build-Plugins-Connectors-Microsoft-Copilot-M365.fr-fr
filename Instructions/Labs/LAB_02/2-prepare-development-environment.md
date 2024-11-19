@@ -1,7 +1,7 @@
 ---
 lab:
   title: Préparer votre environnement de développement
-  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft Copilot'
+  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft 365 Copilot'
 ---
 
 # Préparer votre environnement de développement
@@ -11,7 +11,7 @@ Préparons tout d’abord votre environnement de développement, vos comptes et 
 ## Tâche 1 - Installer les prérequis
 
 > [!IMPORTANT]
-> Pour mener ce projet à bien, vous aurez besoin d’un compte Microsoft 365 avec l’autorisation de charger des applications. Pour effectuer l’**Exercice 2**, le compte doit également être concédé sous licence pour Microsoft Copilot pour Microsoft 365.
+> Pour mener ce projet à bien, vous aurez besoin d’un compte Microsoft 365 avec l’autorisation de charger des applications. Pour effectuer l’**exercice 2**, le compte doit également être concédé sous licence pour Microsoft 365 Copilot.
 
 Si vous utilisez un nouveau locataire, il est judicieux de vous connecter à la [page de Microsoft 365](https://office.com) à l’adresse [https://office.com](https://office.com) avant de commencer. Selon la configuration du locataire, vous pouvez être invité à configurer l’authentification multifacteur. Vérifiez que vous avez accès à Microsoft Teams et à Microsoft Outlook avant de continuer.
 
