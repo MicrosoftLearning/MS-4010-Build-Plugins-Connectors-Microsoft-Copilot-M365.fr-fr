@@ -1,12 +1,12 @@
 ---
 lab:
   title: Présentation
-  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft Copilot'
+  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft 365 Copilot'
 ---
 
 # Présentation
 
-Dans ce projet, vous allez apprendre à utiliser les extensions de message Teams en tant que plug-ins dans Microsoft Copilot pour Microsoft 365. Le projet est basé sur l’exemple « Northwind Inventory » contenu dans ce même [référentiel GitHub](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts). En utilisant l’ancienne [base de données Northwind](https://learn.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases), vous disposez de nombreuses données d’entreprise simulées à utiliser.
+Dans ce projet, vous allez apprendre à utiliser les extensions de message Teams en tant que plug-ins dans Microsoft 365 Copilot. Le projet est basé sur l’exemple « Northwind Inventory » contenu dans ce même [référentiel GitHub](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts). En utilisant l’ancienne [base de données Northwind](https://learn.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases), vous disposez de nombreuses données d’entreprise simulées à utiliser.
 
 Northwind exploite une activité d’e-commerce d’aliments spécialisés à Spokane, Washington. Dans ce labo, vous allez travailler avec l’application Northwind Inventory, qui donne accès à l’inventaire des produits et aux informations financières.
 
@@ -18,7 +18,7 @@ Cet exercice devrait prendre environ **60** minutes.
 
 - Dans [**l’exercice 1**](./3-exercise-1-run-message-extension.md), vous allez exécuter la même application qu’une [extension de message](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) dans Microsoft Teams et Outlook.
 
-- Dans [**l’exercice 2**](./4-exercise-2-run-copilot-plugin.md), vous allez exécuter l’application en tant que plug-in de Copilot pour Microsoft 365. Vous allez expérimenter différentes invites et vous observerez comment le plug-in est appelé à l’aide de différents paramètres. Lorsque vous discutez avec Copilot, vous pouvez suivre les requêtes effectuées sur la console développeur.
+- Dans [**l’exercice 2**](./4-exercise-2-run-copilot-plugin.md), vous allez exécuter l’application en tant que plug-in de Microsoft 365 Copilot. Vous allez expérimenter différentes invites et vous observerez comment le plug-in est appelé à l’aide de différents paramètres. Lorsque vous discutez avec Copilot, vous pouvez suivre les requêtes effectuées sur la console développeur.
 
 - Dans [**l’exercice 3**](./5-exercise-3-add-new-command.md), vous allez apprendre à ajouter une nouvelle commande à l’application afin de pouvoir développer les fonctionnalités du plug-in et effectuer plus de tâches.
 

@@ -1,12 +1,12 @@
 ---
 lab:
   title: "Exercice\_3\_: ajouter une nouvelle commande"
-  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft Copilot'
+  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft 365 Copilot'
 ---
 
 # Exercice 3 : ajouter une nouvelle commande
 
-Dans cet exercice, vous allez améliorer l’extension de message Teams et le plug-in Copilot en ajoutant une nouvelle commande. Bien que l’extension de message actuelle fournit efficacement des informations sur les produits de la base de données d’inventaire Northwind, elle ne fournit pas d’informations relatives aux clients de Northwind. Vous allez introduire une nouvelle commande associée à un appel d’API qui récupère les produits commandés par un nom de client spécifié par l’utilisateur. Cet exercice nécessite que vous ayez effectué les exercices 1, 2 et 3. Si vous n’avez pas de licence Copilot pour Microsoft 365, vous pouvez ignorer l’exercice 4.
+Dans cet exercice, vous allez améliorer l’extension de message Teams et le plug-in Copilot en ajoutant une nouvelle commande. Bien que l’extension de message actuelle fournit efficacement des informations sur les produits de la base de données d’inventaire Northwind, elle ne fournit pas d’informations relatives aux clients de Northwind. Vous allez introduire une nouvelle commande associée à un appel d’API qui récupère les produits commandés par un nom de client spécifié par l’utilisateur. Cet exercice nécessite que vous ayez effectué les exercices 1, 2 et 3. Si vous n’avez pas de licence Microsoft 365 Copilot, vous pouvez ignorer l’exercice 4.
 
 Pour ce faire, nous allons effectuer les tâches suivantes :
 
@@ -232,7 +232,7 @@ Nous allons maintenant modifier le fichier **products.ts** pour ajouter la nouve
 
 ## Tâche 5 - Exécuter l’application Rechercher un produit par nom de société
 
-Vous êtes maintenant prêt à tester l’exemple en tant que plug-in pour Copilot pour Microsoft 365.
+Vous êtes maintenant prêt à tester l’exemple en tant que plug-in pour Microsoft 365 Copilot.
 
 1. Supprimez l’application **Northwind Inventory** dans Teams. Cette tâche est nécessaire, car vous mettez à jour le manifeste. Les mises à jour de manifeste nécessitent une réinstallation de l’application. Le moyen le plus propre de le faire consiste à le supprimer d’abord de Teams.
 

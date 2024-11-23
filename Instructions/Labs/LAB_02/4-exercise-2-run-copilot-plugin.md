@@ -1,17 +1,17 @@
 ---
 lab:
   title: "Exercice\_2\_- Exécuter l’exemple en tant que plug-in Copilot"
-  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft Copilot'
+  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft 365 Copilot'
 ---
 
 # Exercice 2 - Exécuter l’exemple en tant que plug-in Copilot
 
-Dans cet exercice, vous allez exécuter l’application en tant que plug-in pour Microsoft Copilot pour Microsoft 365. Vous allez expérimenter différentes invites et vous observerez comment le plug-in est appelé à l’aide de différents paramètres.
+Dans cet exercice, vous allez exécuter l’application en tant que plug-in pour Microsoft 365 Copilot. Vous allez expérimenter différentes invites et vous observerez comment le plug-in est appelé à l’aide de différents paramètres.
 
 > [!NOTE]  
-> Pour effectuer l’exercice suivant, votre compte doit disposer d’une licence valide pour Copilot pour Microsoft 365.
+> Pour effectuer l’exercice suivant, votre compte doit disposer d’une licence valide pour Microsoft 365 Copilot.
 
-## Tâche 1 - Tester dans Microsoft Copilot pour Microsoft 365 (paramètre unique)
+## Tâche 1 : tester dans Microsoft 365 Copilot (paramètre unique)
 
 1. Dans le rail d’application à gauche, sélectionnez l’application **Copilot**.
 
@@ -45,7 +45,7 @@ Essayez ces cartes adaptatives pour prendre des mesures sur les produits. Notez 
 
 N’hésitez pas à essayer de créer vos propres invites. Vous constaterez qu’elles ne fonctionnent que si Copilot est en mesure d’interroger le plug-in pour obtenir les informations requises. Cela souligne la nécessité d’anticiper les types d’invites que les utilisateurs devront émettre et de fournir les types de requêtes correspondants pour chacune d’entre elles. L’utilisation de plusieurs paramètres rend cette opération plus puissante !
 
-## Tâche 2 - Tester dans Microsoft Copilot pour Microsoft 365 (plusieurs paramètres)
+## Tâche 2 : tester dans Microsoft 365 Copilot (plusieurs paramètres)
 
 Dans cet exercice, vous allez essayer quelques invites qui exécutent la fonctionnalité à paramètres multiples dans l’exemple de plug-in. Ces invites demanderont des données qui peuvent être récupérées par **name**, **category**, **inventory status**, **supplier city** et **stock level**, comme défini dans le **manifeste de l’application**.
 
@@ -111,7 +111,7 @@ Comme vous pouvez le constater, sous la réponse générée par Copilot, nous av
 
 ## Vérifier votre travail
 
-Une fois les tâches effectuées dans cet exercice, vous devez être en mesure d’utiliser le plug-in **Northwind Inventory** dans Copilot pour Microsoft 365. 
+Une fois les tâches effectuées dans cet exercice, vous devez être en mesure d’utiliser le plug-in **Northwind Inventory** dans Microsoft 365 Copilot. 
 
 Lorsque cet exercice est terminé, vous êtes prêt à ajouter une nouvelle commande à l’extension de message afin de pouvoir développer les fonctionnalités du plug-in et effectuer plus de tâches. 
 
