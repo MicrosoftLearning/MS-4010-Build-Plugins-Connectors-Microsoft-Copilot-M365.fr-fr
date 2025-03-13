@@ -44,7 +44,7 @@ Dans Visual Studio Code :
 1. Avant de continuer, à partir de l’onglet **Extensions** de la barre d’activité, recherchez et installez l’extension **Prévisualisation de carte adaptative**, puis créez un fichier de données pour la carte adaptative :
   1. Ouvrez la palette de commandes en appuyant sur <kbd>CTRL</kbd>+<kbd>P</kbd>. Entrez `>Adaptive` pour rechercher des commandes liées à l’utilisation des cartes adaptatives.
 
-    ![Capture d’écran des commandes liées à l’utilisation de cartes adaptatives dans Visual Studio Code.](../media/LAB_03/LAB_03/3-visual-studio-code-adaptive-card-commands.png)
+    ![Capture d’écran des commandes liées à l’utilisation de cartes adaptatives dans Visual Studio Code.](../media/LAB_03/3-visual-studio-code-adaptive-card-commands.png)
 
   1. Dans la liste, choisissez **Carte adaptative : nouveau fichier de données**. Visual Studio Code crée un fichier nommé **dish.data.json**.
   1. Remplacez son contenu par une donnée qui représente un plat :
@@ -68,7 +68,7 @@ Dans Visual Studio Code :
 1. Revenez au fichier **dish.json**.
 1. Dans le filtre, sélectionnez **Aperçu de la carte adaptative**.
 
-  ![Capture d’écran de l’aperçu de la carte adaptative dans Visual Studio Code.](../media/LAB_03/LAB_03/3-visual-studio-code-adaptive-card-preview.png)
+  ![Capture d’écran de l’aperçu de la carte adaptative dans Visual Studio Code.](../media/LAB_03/3-visual-studio-code-adaptive-card-preview.png)
 
   Visual Studio Code ouvre un aperçu de la carte à côté. Lorsque vous modifiez la carte, vos modifications sont immédiatement visibles sur le côté.
 

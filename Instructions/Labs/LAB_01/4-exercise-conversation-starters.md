@@ -114,7 +114,7 @@ Ensuite, testez votre agent déclaratif dans Microsoft 365 Copilot et validez l
 
 Continuez dans le navigateur web :
 
-1. Dans **Microsoft 365 Copilot**, sélectionnez l’icône en haut à droite pour développer le **panneau latéral de Copilot**.
+1. Dans **Microsoft 365 Copilot**, sélectionnez l’icône en haut à droite pour **développer le panneau latéral de Copilot**.
 1. Recherchez **Support technique** dans la liste des agents et sélectionnez-le pour entrer dans l’expérience immersive afin de discuter directement avec l’agent. Notez que les amorces de conversation que vous avez définies dans le manifeste s’affichent dans l’interface utilisateur.
 
 ![Capture d’écran de l’agent déclaratif de support technique dans l’expérience immersive avec des amorces de conversation personnalisées dans Microsoft Edge.](../media/LAB_01/test-conversation-starters.png)
