@@ -122,6 +122,7 @@ Dans Visual Studio Code :
     > Pour conserver la mise en forme, vous devrez peut-être effectuer plusieurs opérations de copier/coller dans le Bloc-notes avant de copier dans Visual Studio Code.
 
     1. Enregistrez les modifications.
+
 1. Pour aider les utilisateurs à comprendre à quoi l’agent peut leur servir, ajoutez des amorces de conversation :
     1. Ouvrez le fichier **appPackage/declarativeAgent.json**.
     1. Après la propriété **instructions**, ajoutez une nouvelle propriété nommée **conversation_starters** :
