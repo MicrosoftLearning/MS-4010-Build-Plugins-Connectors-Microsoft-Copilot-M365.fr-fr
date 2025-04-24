@@ -22,12 +22,12 @@ Dans Visual Studio Code :
    ```json
    "conversation_starters": [
        {
-           "title": "Microsoft 365",
-           "text": "Tell me about Microsoft 365"
+           "title": "Product information",
+           "text": "Tell me about Eagle Air"
        },
        {
-           "title": "Licensing",
-           "text": "What licenses are available for Microsoft 365?"
+           "title": "Returns policy",
+           "text": "What is the returns policy?"
        },
        {
            "title": "Product information",
@@ -36,6 +36,10 @@ Dans Visual Studio Code :
        {
            "title": "Product troubleshooting",
            "text": "I'm having trouble with a product. Can you help me troubleshoot the issue?"
+       },
+       {
+           "title": "Repair information",
+           "text": "Can you provide information on how to get a product repaired?"
        },
        {
            "title": "Contact support",
@@ -51,61 +55,68 @@ Le fichier **declarativeAgent.json** doit être similaire à ceci :
 ```json
 {
   "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.0/schema.json",
-    "version": "v1.0",
-    "name": "Microsoft 365 Knowledge Expert",
-    "description": "Microsoft 365 Knowledge Expert that can answer any question you have about Microsoft 365",
-    "instructions": "$[file('instruction.txt')]",
-    "capabilities": [
+  "version": "v1.0",
+  "name": "Product support",
+  "description": "Product support agent that can help answer customer queries about Contoso Electronics products",
+  "instructions": "$[file('instruction.txt')]",
+  "capabilities": [
+    {
+      "name": "OneDriveAndSharePoint",
+      "items_by_url": [
         {
-            "name": "WebSearch",
-            "sites": [
-                {
-                    "url": "https://learn.microsoft.com/microsoft-365/"
-                }
-            ]
+          "url": "https://{tenant}-my.sharepoint.com/personal/{user}/Documents/Products"
         }
-    ],
+      ]
+    }
+  ],
   "conversation_starters": [
-       {
-           "title": "Microsoft 365",
-           "text": "Tell me about Microsoft 365"
-       },
-       {
-           "title": "Licensing",
-           "text": "What licenses are available for Microsoft 365?"
-       },
-       {
-           "title": "Product information",
-           "text": "Can you provide information on a specific product?"
-       },
-       {
-           "title": "Product troubleshooting",
-           "text": "I'm having trouble with a product. Can you help me troubleshoot the issue?"
-       },
-       {
-           "title": "Contact support",
-           "text": "How can I contact support for help?"
-       }
+    {
+      "title": "Product information",
+      "text": "Tell me about Eagle Air"
+    },
+    {
+      "title": "Returns policy",
+      "text": "What is the returns policy?"
+    },
+    {
+      "title": "Product information",
+      "text": "Can you provide information on a specific product?"
+    },
+    {
+      "title": "Product troubleshooting",
+      "text": "I'm having trouble with a product. Can you help me troubleshoot the issue?"
+    },
+    {
+      "title": "Repair information",
+      "text": "Can you provide information on how to get a product repaired?"
+    },
+    {
+      "title": "Contact support",
+      "text": "How can I contact support for help?"
+    }
   ]
 }
 ```
 
-## Tâche 2 : tester l’agent déclaratif dans Microsoft 365 Copilot Chat
+## Tâche 2 : tester l’agent déclaratif dans Microsoft 365 Copilot
 
 Ensuite, chargez vos modifications et démarrez une session de débogage.
 
 Dans Visual Studio Code :
 
 1. Dans la **barre d’activité**, ouvrez l’extension **Teams Toolkit**.
-1. Dans la section **Cycle de vie**, sélectionnez **Configurer**, puis **Publie**r.
-1. **Confirmez** que vous souhaitez envoyer une mise à jour pour le catalogue d’applications.
+1. Dans la section **Cycle de vie**, sélectionnez **Approvisionner**.
 1. Attendez la fin du chargement.
+1. Dans la **barre d’activité**, basculez vers la vue **Exécuter et Déboguer**.
+1. Sélectionnez le bouton **Démarrer le débogage** en regard de la liste déroulante de la configuration, ou appuyez sur <kbd>F5</kbd>. Une nouvelle fenêtre de navigateur s’ouvre et accède à Microsoft 365 Copilot.
+
+Ensuite, testez votre agent déclaratif dans Microsoft 365 Copilot et validez les résultats.
 
 Continuez dans le navigateur web :
 
 1. Dans **Microsoft 365 Copilot**, sélectionnez l’icône en haut à droite pour **développer le panneau latéral de Copilot**.
 1. Recherchez **Support technique** dans la liste des agents et sélectionnez-le pour entrer dans l’expérience immersive afin de discuter directement avec l’agent. Notez que les amorces de conversation que vous avez définies dans le manifeste s’affichent dans l’interface utilisateur.
 
-![Capture d’écran de Microsoft Edge montrant l’agent déclaratif expert en Microsoft 365 dans l’expérience immersive avec des amorces de conversation personnalisées.](../media/LAB_01/test-conversation-starters.png)
+![Capture d’écran de l’agent déclaratif de support technique dans l’expérience immersive avec des amorces de conversation personnalisées dans Microsoft Edge.](../media/LAB_01/test-conversation-starters.png)
 
 Fermez le navigateur pour arrêter la session de débogage dans Visual Studio Code.
